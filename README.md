@@ -1,8 +1,12 @@
-# React + Vite
+## chatApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Bu proje, React ve Firebase kullanarak gerçek zamanlı mesajlaşma sağlayan bir sohbet uygulaması.
 
-Currently, two official plugins are available:
+# Kullanılan Kütüphaneler
+- emoji-picker-react
+- firebase
+- sass
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Mesaj Gönderme: Kullanıcılar mesajlarını form üzerinden yazıp Firebase Firestore'a kaydediyor. Gerçek Zamanlı Mesaj Alımı: Mesajlar anlık olarak dinleniyor ve sayfada gösteriliyor. Emoji Desteği: Kullanıcılar mesajlarına emoji ekleyebiliyor. Oda Seçimi: Farklı sohbet odalarına geçiş yapılabiliyor.
+
+- <img src="screen.gif" />

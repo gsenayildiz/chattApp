@@ -22,12 +22,15 @@ const ChatPage = ({ room, setRoom }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    //mesaj boş mu kontrol et boşsa durdur
+    if (text.trim() === "") return;
+
     // mesaj documantının kaydedileceği koleksiyonun referansını al
     const messagesCol = collection(db, "messages");
 
     //referansı alınan kolksiyonu ducumenti ekle
     await addDoc(messagesCol, {
-      text: e.target[0].value,
+      text,
       room,
       author: {
         id: auth.currentUser.uid,
@@ -83,8 +86,8 @@ const ChatPage = ({ room, setRoom }) => {
 
       <main>
         {messages.length < 1 ? (
-          <div className="warn"> 
-          <p>Sohbete ilk mesajı gönderin</p>
+          <div className="warn">
+            <p>Sohbete ilk mesajı gönderin</p>
           </div>
         ) : (
           messages.map((data, key) => <Message data={data} key={key} />)
